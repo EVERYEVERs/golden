@@ -13,34 +13,69 @@ body {
     background-color: var(--main-bg-color);
     color: var(--text-color);
     margin: 0;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    padding-top: 80px; /* 헤더 높이만큼 패딩 추가 */
     background-image: url('data:image/svg+xml,%3Csvg width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Cpath d="M5 0h1L0 6V5zM6 5v1H5z"/%3E%3C/g%3E%3C/svg%3E');
 }
+
+/* --- 공통 헤더 스타일 --- */
+.site-header {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--divider-color);
+    padding: 0 40px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.site-header .logo a {
+    font-size: 1.5em;
+    font-weight: 900;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.site-header .main-nav a {
+    margin-left: 25px;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.site-header .main-nav a:hover, .site-header .main-nav a.active {
+    color: var(--primary-color);
+}
+/* ------------------------ */
 
 .container {
     width: 100%;
     max-width: 800px;
+    margin: 20px auto;
+    padding: 40px;
+    text-align: center;
+}
+
+#game-container {
     background: var(--white-color);
     border-radius: 16px;
     padding: 40px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    text-align: center;
 }
 
-header h1 {
-    color: var(--primary-color);
-    font-size: 2.5em;
-    font-weight: 900;
+#question-area h1 {
+    color: var(--text-color);
+    font-size: 2em;
+    font-weight: 700;
     margin-bottom: 30px;
-}
-
-#question-area h2 {
-    font-size: 1.8em;
-    margin-bottom: 40px;
 }
 
 #choices-area {
@@ -64,7 +99,7 @@ header h1 {
 
 .choice-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 12px 25px rgba(138, 43, 226, 0.2); /* Primary color shadow */
+    box-shadow: 0 12px 25px rgba(138, 43, 226, 0.2);
 }
 
 .choice-card.selected {
@@ -76,7 +111,7 @@ header h1 {
 .choice-text {
     font-size: 1.5em;
     font-weight: 700;
-    min-height: 60px; /* 텍스트 길이에 따른 높이 변화 방지 */
+    min-height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -93,7 +128,7 @@ header h1 {
     font-weight: 700;
     color: var(--primary-color);
     margin-top: 15px;
-    display: none; /* 초기에는 숨김 */
+    display: none;
 }
 
 #next-button {
@@ -110,12 +145,12 @@ header h1 {
 }
 
 #next-button:hover {
-    background-color: #7A1CC2; /* Darker shade of primary color */
+    background-color: #7A1CC2;
     transform: scale(1.05);
 }
 
 .hidden {
-    display: none !important; /* 중요도를 높여 확실히 숨김 처리 */
+    display: none !important;
 }
 
 /* 댓글 섹션 */
@@ -124,6 +159,10 @@ header h1 {
     text-align: left;
     border-top: 1px solid var(--divider-color);
     padding-top: 30px;
+    background: var(--white-color);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 #comment-title {
@@ -187,13 +226,18 @@ header h1 {
 }
 
 /* 반응형 디자인 */
-@media (max-width: 600px) {
-    .container {
-        padding: 20px;
+@media (max-width: 768px) {
+    .site-header {
+        padding: 0 20px;
+        height: auto;
+        flex-direction: column;
+        padding-bottom: 10px;
     }
-
-    header h1 {
-        font-size: 2em;
+    body {
+        padding-top: 120px; /* 모바일 헤더 높이 조정 */
+    }
+    .container {
+        padding: 10px;
     }
 
     #choices-area {

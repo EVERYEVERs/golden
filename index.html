@@ -8,13 +8,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header class="site-header">
+        <div class="logo">
+            <a href="index.html">밸런스 커뮤니티</a>
+        </div>
+        <nav class="main-nav">
+            <a href="index.html">밸런스 게임</a>
+            <a href="board.html">자유 게시판</a>
+        </nav>
+    </header>
+
     <div class="container">
-        <header>
-            <h1>오늘의 밸런스 게임</h1>
-        </header>
         <main id="game-container">
             <div id="question-area">
-                <h2 id="question-text">질문이 여기에 표시됩니다.</h2>
+                <h1 id="question-text">질문이 여기에 표시됩니다.</h1>
             </div>
             <div id="choices-area">
                 <div class="choice-card" id="choice-a">
@@ -33,7 +40,7 @@
             <h3 id="comment-title">댓글</h3>
             <form id="comment-form">
                 <input type="text" id="comment-author" placeholder="닉네임" required>
-                <textarea id="comment-text" placeholder="논쟁하기" required></textarea>
+                <textarea id="comment-text" placeholder="의견을 나눠보세요!" required></textarea>
                 <button type="submit">등록</button>
             </form>
             <div id="comments-list">
