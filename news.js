@@ -39,6 +39,24 @@ document.addEventListener('DOMContentLoaded', () => {
             source: "한국경제 | 1주 전",
             thumbnail: "https://images.unsplash.com/photo-1696276147238-66aed6873b18?q=80&w=732&auto=format&fit=crop"
         },
+        {
+            title: "글로벌 공급망 불안 가중…에너지·원자재 가격 변동성 확대",
+            summary: "지정학적 리스크와 기후 변화로 인해 글로벌 공급망의 불안정성이 커지면서 에너지 및 원자재 가격의 변동성이 확대되고 있다.",
+            source: "한국경제 | 2주 전",
+            thumbnail: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=870&auto=format&fit=crop"
+        },
+        {
+            title: "비트코인, 반감기 이후 숨 고르기…다음 상승 동력은?",
+            summary: "비트코인 가격이 네 번째 반감기를 지난 후 박스권에서 등락을 거듭하고 있다. 시장은 현물 ETF 자금 유입세와 기관 투자자의 움직임을 주목하고 있다.",
+            source: "한국경제 | 2주 전",
+            thumbnail: "https://images.unsplash.com/photo-1621405940023-5339945b6f35?q=80&w=774&auto=format&fit=crop"
+        },
+        {
+            title: "ESG 경영, 이제는 생존 필수…기업들, 지속가능성 보고서 발간 봇물",
+            summary: "환경·사회·지배구조(ESG)가 기업 경영의 핵심 요소로 자리 잡으면서, 국내 주요 기업들이 앞다퉈 지속가능성 보고서를 발간하며 관련 활동을 강화하고 있다.",
+            source: "한국경제 | 3주 전",
+            thumbnail: "https://images.unsplash.com/photo-1603453691925-b3285a8822c6?q=80&w=870&auto=format&fit=crop"
+        }
     ];
 
     function renderNews() {
