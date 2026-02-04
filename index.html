@@ -3,51 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>밸런스 게임</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+    <title>로그인 - 밸런스 커뮤니티</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="site-header">
-        <div class="logo">
-            <a href="index.html">밸런스 커뮤니티</a>
-        </div>
-        <nav class="main-nav">
-            <a href="index.html" class="active">밸런스 게임</a>
-            <a href="board.html">자유 게시판</a>
-            <a href="news.html">주식&경제 속보</a>
-        </nav>
-    </header>
-
-    <div class="container">
-        <main id="game-container">
-            <div id="question-area">
-                <h1 id="question-text">질문이 여기에 표시됩니다.</h1>
-            </div>
-            <div id="choices-area">
-                <div class="choice-card" id="choice-a">
-                    <div class="choice-text">선택 A</div>
-                    <div class="result-percent">0%</div>
+    <div class="login-container">
+        <div class="login-box">
+            <h1 class="logo">밸런스 커뮤니티</h1>
+            <form id="login-form">
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="이메일" required>
                 </div>
-                <div class="vs-divider">VS</div>
-                <div class="choice-card" id="choice-b">
-                    <div class="choice-text">선택 B</div>
-                    <div class="result-percent">0%</div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="비밀번호" required>
                 </div>
-            </div>
-            <button id="next-button" class="hidden">다음 질문</button>
-        </main>
-        <section id="comments-section" class="hidden">
-            <h3 id="comment-title">댓글</h3>
-            <form id="comment-form">
-                <input type="text" id="comment-author" placeholder="닉네임" required>
-                <textarea id="comment-text" placeholder="의견을 나눠보세요!" required></textarea>
-                <button type="submit">등록</button>
+                <button type="submit" class="login-button">로그인</button>
             </form>
-            <div id="comments-list">
-                <!-- 댓글이 여기에 동적으로 추가됩니다. -->
+            <div class="links">
+                <a href="#">비밀번호를 잊으셨나요?</a>
+                <a href="#">회원가입</a>
             </div>
-        </section>
+        </div>
     </div>
     <script src="main.js"></script>
 </body>

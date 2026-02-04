@@ -1,85 +1,100 @@
 /* --- 기본 스타일 및 변수 정의 --- */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
 :root {
-    --primary-color: #8A2BE2; /* 매력적인 보라색 계열 */
-    --secondary-color: #4CAF50; /* 생동감 있는 녹색 */
-    --background-color: #f0e6ff; /* 부드러운 연보라색 배경 */
+    --primary-color: #6a5acd; /* 고급스러운 슬레이트 블루 */
+    --background-color: #f4f7f6; /* 부드러운 회색 배경 */
     --text-color: #333;
     --white-color: #fff;
+    --border-color: #ddd;
     --font-family: 'Pretendard', sans-serif;
 }
 
 body {
     font-family: var(--font-family);
-    background: linear-gradient(135deg, var(--background-color), #e6e6fa);
+    background-color: var(--background-color);
     color: var(--text-color);
     margin: 0;
-    padding-top: 80px; /* 헤더 높이만큼 패딩 추가 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
+/* --- 로그인 컨테이너 및 박스 --- */
+.login-container {
+    width: 100%;
+    max-width: 400px;
     padding: 20px;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+.login-box {
+    background-color: var(--white-color);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-/* --- 헤더 및 네비게이션 --- */
-.site-header {
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-    padding: 15px 40px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
-
-.site-header .logo a {
-    font-size: 1.5em;
+.logo {
+    font-size: 2em;
     font-weight: 800;
     color: var(--primary-color);
-    text-decoration: none;
+    margin-bottom: 30px;
 }
 
-.main-nav a {
-    margin-left: 25px;
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-.main-nav a:hover, .main-nav a.active {
-    color: var(--primary-color);
-    font-weight: 700;
-}
-
-/* --- 메인 컨텐츠 영역 --- */
-.main-content {
-    text-align: center;
-    padding: 40px 0;
-}
-
-.main-content h1 {
-    font-size: 3em;
-    color: var(--primary-color);
+/* --- 입력 필드 --- */
+.input-group {
     margin-bottom: 20px;
 }
 
-.main-content .subtitle {
-    font-size: 1.2em;
-    color: #555;
-    margin-bottom: 40px;
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1em;
+    box-sizing: border-box; /* 패딩과 테두리를 너비에 포함 */
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
+.input-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(106, 90, 205, 0.2);
+}
 
+/* --- 버튼 및 링크 --- */
+.login-button {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.login-button:hover {
+    background-color: #5849a3;
+    transform: translateY(-2px);
+}
+
+.links {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links a {
+    color: #777;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.links a:hover {
+    color: var(--primary-color);
+}
