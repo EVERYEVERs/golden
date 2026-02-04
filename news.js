@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const newsGrid = document.getElementById('news-grid');
 
-    // CORS 정책으로 인해 실제 데이터를 가져올 수 없으므로, 예시 데이터를 사용합니다.
     const sampleNews = [
         {
             title: "코스피, 외인·기관 매도에 2750선 하회…밸류업 기대감은 여전",
