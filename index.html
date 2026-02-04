@@ -3,28 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>로그인 - 밸런스 커뮤니티</title>
+    <title>오늘의 운세</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="login-container">
-        <div class="login-box">
-            <h1 class="logo">밸런스 커뮤니티</h1>
-            <form id="login-form">
-                <div class="input-group">
-                    <input type="email" id="email" placeholder="이메일" required>
-                </div>
-                <div class="input-group">
-                    <input type="password" id="password" placeholder="비밀번호" required>
-                </div>
-                <button type="submit" class="login-button">로그인</button>
-            </form>
-            <div class="links">
-                <a href="#">비밀번호를 잊으셨나요?</a>
-                <a href="#">회원가입</a>
+    <div class="container">
+        <div class="card" id="main-card">
+            <h1>오늘의 운세</h1>
+            <p class="subtitle">당신의 오늘을 점쳐보세요</p>
+            <div class="input-group">
+                <input type="text" id="name" placeholder="이름을 입력하세요">
+                <button onclick="getFortune()">운세 보기</button>
             </div>
         </div>
+
+        <div class="card result-card" id="result-card" style="display: none;">
+            <button class="close-btn" onclick="closeResult()">&times;</button>
+            <img src="https://i.pinimg.com/564x/b8/91/3c/b8913cd094a86f34533035359195371c.jpg" alt="운세 결과 이미지" class="result-img">
+            <h2>오늘의 운세</h2>
+            <p class="user-name" id="result-name"></p>
+            <p class="fortune-text" id="fortune-text"></p>
+        </div>
     </div>
+
     <script src="main.js"></script>
 </body>
 </html>
